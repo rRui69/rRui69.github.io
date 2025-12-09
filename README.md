@@ -1,2 +1,2 @@
-# rRuii69.github.io
+# rRui69.github.io
 Church App - AppDev
