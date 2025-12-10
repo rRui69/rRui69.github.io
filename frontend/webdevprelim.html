@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Web Dev Prelim</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -24,35 +23,36 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <header class="mb-4">
-      <h1 class="display-5">Bootstrap HTML Skeleton</h1>
-      <p class="lead">A minimal starter template using Bootstrap 5.</p>
-    </header>
-
-    <section class="row g-3">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-body">
-            Main content area.
-          </div>
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-      </div>
-      <aside class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            Sidebar / widgets
-          </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
         </div>
-      </aside>
-    </section>
-  </main>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
   <footer class="bg-light py-3 mt-5">
-    <div class="container text-center small">© 2025 Your Name</div>
+    <div class="container text-center small">© John Elijah Cimafranca - WebDev Prelim Exam</div>
   </footer>
-
-  <!-- Bootstrap JS (bundle includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
