@@ -1,0 +1,14 @@
+.homeimage{
+    padding-left: 5vw;
+    width: 15vw;
+    height: auto;
+}
+
+.carus{
+    min-height: 60vh;
+    object-fit: cover;
+}
+
+.navbarcol{
+    background-color: #450ba3;
+}
