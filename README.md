@@ -1,7 +1,6 @@
-# rRui69.github.io
+# App Dev - 2025
+<h1>Church App</h1>
+<p>This Part serves as the documentation for the repository of this project.</p>
 
-Church App - AppDev
+Documentation:
 
-Testing
-
-# New Web Test
