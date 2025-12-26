@@ -16,7 +16,7 @@
         <h1 class="h5 mb-1">Sign in to "Church App Name"</h1>
       </div>
 
-      <form id="loginForm" class="px-4 pb-3" action="testing.php" method="POST">
+      <form id="loginForm" class="px-4 pb-3" action="login.php" method="POST">
         <div class="mb-3">
           <label for="username" class="form-label visually-hidden">Username or Email</label>
           <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Phone, email, or username" required>
@@ -49,6 +49,6 @@
 </html>
 
 <?php
-    $_POST["username"];
-    $_POST["password"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 ?>
