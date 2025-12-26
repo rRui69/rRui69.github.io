@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+  /* Palette (adjust these to change the theme)
+     --color-1: #7b2d91  => Primary purple (used for primary buttons / accents)
+     --color-2: #5b0e6d  => Deep purple (hover / border accents)
+     --color-3: #00bbfa  => Cyan accent (links / highlights)
+     --color-4: #10110e  => Dark (body text)
+     --color-5: #ffffff  => White (card backgrounds)
+  */
+  --color-1: #7b2d91;
+  --color-2: #5b0e6d;
+  --color-3: #00bbfa;
+  --color-4: #10110e;
+  --color-5: #ffffff;
+  /* keep a card-radius variable used by the card rules below */
+  --card-radius: 12px;
+}
+
+body {
+  font-family: 'Fredoka One', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* Page background: use deep purple (color-2). Change --color-2 in :root to alter. */
+  background: var(--color-2);
+  /* Main text: white for contrast on deep purple. Change --color-5 to alter text color. */
+  color: var(--color-5);
+}
+
+/* Bootstrap utility `.bg-light` sets a light background; override it so
+   `body.bg-light` still shows the deep purple page background. */
+body.bg-light {
+  background: var(--color-2) !important;
+  color: var(--color-5) !important;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  /* Card background: primary purple (change --color-1 to alter card color) */
+  background: var(--color-1);
+  /* Ensure text inside card is readable on purple */
+  color: var(--color-5);
+  border-radius: var(--card-radius);
+  padding-top: 18px;
+  padding-bottom: 0;
+}
+
+/* Card-specific element adjustments for contrast */
+.auth-card h1, .auth-card h2, .auth-card h3, .auth-card h4, .auth-card .h5 {
+  color: var(--color-5); /* headings on card use white */
+}
+.auth-card .text-muted {
+  color: rgba(255,255,255,0.85) !important; /* lighter muted text on card */
+}
+
+/* Keep form inputs white inside the colored card for readability */
+.auth-card .form-control {
+  background: var(--color-5);
+  color: var(--color-4);
+  border: 1px solid rgba(16,17,14,0.08);
+}
+.auth-card .form-control::placeholder {
+  color: rgba(16,17,14,0.45);
+}
+
+/* Sign in button inside the card: use cyan (color-3) with white text (color-5) */
+.auth-card .btn-primary {
+  background-color: var(--color-3) !important;
+  border-color: var(--color-3) !important;
+  color: var(--color-5) !important; /* white text */
+}
+.auth-card .btn-primary:hover, .auth-card .btn-primary:focus {
+  background-color: rgba(0,187,250,0.92) !important; /* slight hover darken for color-3 */
+  border-color: var(--color-3) !important;
+}
+
+/* Card top separator line: use color-2 */
+.auth-card .border-top {
+  border-top: 1px solid var(--color-2) !important;
+}
+
+/* small password toggle */
+.pwd-toggle {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  transform: translateY(0);
+  padding: .25rem .45rem;
+  font-size: .8rem;
+  border-radius: 6px;
+}
+
+/* Make inputs slightly larger */
+.form-control-lg {
+  padding: .9rem 1rem;
+}
+
+/* compact links & text */
+a {
+  text-decoration: none;
+  /* Link color: cyan accent (change --color-3) */
+  color: var(--color-3);
+}
+
+/* smaller helper text */
+.small {
+  font-size: .85rem;
+}
+
+/* Bootstrap-specific overrides (minimal) */
+/* Primary buttons: use palette primary purple */
+.btn-primary {
+  background-color: var(--color-1) !important;
+  border-color: var(--color-2) !important;
+  color: var(--color-5) !important; /* white text on primary */
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--color-2) !important; /* deeper purple on hover */
+  border-color: var(--color-2) !important;
+}
+
+/* Outline primary (Create account / register) */
+/* Use color-3 for the register button — adjust --color-3 in :root */
+.btn-outline-primary {
+  color: var(--color-3) !important;
+  border-color: var(--color-3) !important;
+}
+.btn-outline-primary:hover {
+  background-color: rgba(0,187,250,0.08) !important; /* subtle cyan tint from color-3 */
+}
+
+/* If you only want the register button in the card to be color-3,
+   use the scoped selector below instead of the global one above:
+   .auth-card .btn-outline-primary { ... }
+*/
+
+/* Small muted text stays readable against white card */
+.text-muted {
+  color: rgba(16,17,14,0.6) !important; /* derived from --color-4 */
+}
+
+/* Utility adjustments for mobile */
+@media (max-width: 420px) {
+  .auth-card { margin: 0 12px; }
+  .x-logo { width: 60px; height: 60px; font-size: 30px; }
+}
