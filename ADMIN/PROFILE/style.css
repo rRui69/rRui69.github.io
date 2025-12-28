@@ -1,5 +1,20 @@
-body{ padding-top:56px; }
+.profile-img-editable {
+	cursor: pointer;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+body{
+	padding-top:56px;
+	font-family: 'Fredoka', Arial, sans-serif;
+	font-weight: 400;
+}
 main{ padding-top:1rem; }
+
+h1, h2, h3, h4, h5, h6, .fw-bold {
+	font-family: 'Fredoka', Arial, sans-serif;
+	font-weight: 400 !important;
+}
 
 /* Profile card and image styles */
 .profile-card {
@@ -22,4 +37,27 @@ main{ padding-top:1rem; }
 }
 .profile-list {
 	font-size: 1.2rem;
+}
+
+/* Account details form card styles */
+.card {
+	border-radius: 1rem;
+	box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+
+@media (min-width: 768px) {
+	.profile-card {
+		margin-right: 2rem;
+	}
+	.card {
+		margin-left: 1rem;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.profile-card, .card {
+		margin-bottom: 1.5rem;
+		margin-right: 0;
+		margin-left: 0;
+	}
 }

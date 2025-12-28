@@ -27,18 +27,81 @@
       </div>
     </nav>
 
-    <main class="dashboard-main-content container py-5 dashboard-header">
-      <h1>Profile</h1>
-      <div class="row mt-4">
-        <div class="col-12 col-md-8 offset-md-4 d-flex justify-content-center">
-          <div class="profile-card text-center">
-            <img src="https://placehold.co/300x300.png" alt="Profile Picture" class="profile-img mx-auto" width="300" height="300">
-            <ul class="list-unstyled profile-list">
-              <li><strong>First Name:</strong> Juan</li>
-              <li><strong>Middle Name:</strong> Santos</li>
-              <li><strong>Last Name:</strong> Dela Cruz</li>
-              <li><strong>Account Type:</strong> Administrator</li>
-            </ul>
+
+    <main class="dashboard-main-content dashboard-header">
+      <div class="container-fluid py-5">
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-5 col-lg-4 mb-4">
+            <div class="profile-card text-center p-4 h-100">
+              <form enctype="multipart/form-data">
+                <label for="profilePicInput">
+                  <img src="400.png" alt="Profile Picture" class="profile-img rounded-circle mx-auto mb-3 profile-img-editable" width="200" height="200">
+                </label>
+                <input type="file" id="profilePicInput" accept="image/*" style="display:none;">
+              </form>
+              <h3 class="fw-bold mb-1">Juan Dela Cruz</h3>
+              <div class="text-muted mb-3">Administrator</div>
+              <div class="text-start mt-3">
+                <h6 class="fw-bold">Description</h6>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae quod dolorum sint alias, possimus illum assumenda eligendi cumque?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 d-flex align-items-center justify-content-center mb-4">
+            <div class="w-100">
+              <div class="card p-4 h-100">
+                <h4 class="fw-bold mb-4">Account Details</h4>
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="form-label">First Name</label>
+                      <div class="form-control-plaintext bg-light border rounded px-3 py-2">Juan</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Last Name</label>
+                      <div class="form-control-plaintext bg-light border rounded px-3 py-2">Dela Cruz</div>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" value="juan@example.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Password</label>
+                      <div class="form-control-plaintext bg-light border rounded px-3 py-2">********</div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Address</label>
+                    <div class="form-control-plaintext bg-light border rounded px-3 py-2">1234 Main St.</div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <label class="form-label">City</label>
+                      <div class="form-control-plaintext bg-light border rounded px-3 py-2">Metro City</div>
+                    </div>
+                    <div class="col-md-3 mb-3 mb-md-0">
+                      <label for="state" class="form-label">State</label>
+                      <select class="form-select" id="state">
+                        <option selected>Choose</option>
+                        <option>State 1</option>
+                        <option>State 2</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip" value="1000">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae quod dolorum sint alias, possimus illum assumenda eligendi cumque?</textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Account</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
