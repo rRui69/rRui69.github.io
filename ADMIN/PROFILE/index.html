@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Profile - Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../STYLES/sidebar.css">
+    <link rel="stylesheet" href="../STYLES/sidebar.css">
+    <link rel="stylesheet" href="../STYLES/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   </head>
+  
   <body>
+
     <nav class="sidebar" id="sidebar">
       <div class="px-3">
         <ul class="nav nav-pills flex-column" id="sidebarMenu">
@@ -20,17 +26,25 @@
         </ul>
       </div>
     </nav>
-    <nav class="navbar navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="../dashboard.html">Admin Dashboard</a>
-      </div>
-    </nav>
-    <main class="container py-5">
+
+    <main class="dashboard-main-content container py-5 dashboard-header">
       <h1>Profile</h1>
-      <p>This is the profile page.</p>
+      <div class="row mt-4">
+        <div class="col-12 col-md-8 offset-md-4 d-flex justify-content-center">
+          <div class="profile-card text-center">
+            <img src="https://placehold.co/300x300.png" alt="Profile Picture" class="profile-img mx-auto" width="300" height="300">
+            <ul class="list-unstyled profile-list">
+              <li><strong>First Name:</strong> Juan</li>
+              <li><strong>Middle Name:</strong> Santos</li>
+              <li><strong>Last Name:</strong> Dela Cruz</li>
+              <li><strong>Account Type:</strong> Administrator</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Sidebar is now statically included; JS loader removed -->
     <script src="script.js"></script>
   </body>
 </html>
