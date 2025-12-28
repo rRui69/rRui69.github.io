@@ -1,3 +1,47 @@
+/* Dashboard box styles */
+.dashboard-box {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Fredoka One', cursive;
+}
+.dashboard-schedules {
+  background: #0d6efd;
+  color: #fff;
+}
+.dashboard-inbox {
+  background: #198754;
+  color: #fff;
+}
+.dashboard-livestream {
+  background: #0dcaf0;
+  color: #fff;
+}
+.dashboard-documents {
+  background: #ffc107;
+  color: #212529;
+}
+.dashboard-collections {
+  background: #6c757d;
+  color: #fff;
+}
+/* Custom widths for dashboard columns */
+.dashboard-col-wide {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+.dashboard-col-mid {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+.dashboard-col-narrow {
+  flex: 0 0 24%;
+  max-width: 24%;
+}
 /* Main content margin and padding after removing topbar */
 .dashboard-main-content {
   margin-left: var(--sidebar-width);
