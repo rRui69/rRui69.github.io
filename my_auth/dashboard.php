@@ -12,5 +12,5 @@ if (!isset($_SESSION['user_id'])) {
 
 
         //eto yung gagawin nyong dashboard page na may session check at welcome message
-        //kapag hindi naka login, ire-redirect sa login page
-        //kapag naka login, ipapakita yung welcome message at logout link
+        
+       
