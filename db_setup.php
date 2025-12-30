@@ -23,6 +23,9 @@ try {
             username VARCHAR(50) NOT NULL UNIQUE,
             email VARCHAR(100) NOT NULL UNIQUE,
             password VARCHAR(255) NOT NULL,
+            full_name VARCHAR(100) NOT NULL,
+            gender ENUM('Male', 'Female', 'Prefer not to say') NOT NULL,
+            date_registered DATE DEFAULT (CURRENT_DATE),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ";

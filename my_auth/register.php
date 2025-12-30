@@ -1,10 +1,9 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
-
-   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -19,10 +18,9 @@
                 </div>
 
                 <div class="card-body">
-                
-                    <form action="#" method="post">
 
-                        
+                    <form action="register_process.php" method="post">
+
                         <div class="mb-3">
                             <label class="form-label">User ID</label>
                             <input type="text" class="form-control" placeholder="Auto-generated" disabled>
@@ -81,7 +79,6 @@
         </div>
     </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
