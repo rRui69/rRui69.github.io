@@ -9,3 +9,8 @@ if (!isset($_SESSION['user_id'])) {
 
 <h2>Welcome, <?php echo $_SESSION['username']; ?>!</h2>
 <a href="logout.php">Logout</a>
+
+
+        //eto yung gagawin nyong dashboard page na may session check at welcome message
+        //kapag hindi naka login, ire-redirect sa login page
+        //kapag naka login, ipapakita yung welcome message at logout link
