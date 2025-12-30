@@ -16,10 +16,10 @@
         <h1 class="h5 mb-1">Sign in to "Church App Name"</h1>
       </div>
 
-      <form id="loginForm" class="px-4 pb-3">
+      <form id="loginForm" class="px-4 pb-3" action="login.php" method="POST">
         <div class="mb-3">
-          <label for="loginIdentifier" class="form-label visually-hidden">Username or Email</label>
-          <input type="text" id="loginIdentifier" name="identifier" class="form-control form-control-lg" placeholder="Phone, email, or username" required>
+          <label for="username" class="form-label visually-hidden">Username or Email</label>
+          <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Phone, email, or username" required>
         </div>
 
         <div class="mb-3 position-relative">
@@ -47,3 +47,8 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<?php
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+?>
