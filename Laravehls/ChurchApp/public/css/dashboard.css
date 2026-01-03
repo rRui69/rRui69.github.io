@@ -1,0 +1,83 @@
+/* Dashboard box styles */
+.dashboard-box {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Fredoka One', cursive;
+}
+.dashboard-schedules {
+  background: #0d6efd;
+  color: #fff;
+}
+.dashboard-inbox {
+  background: #198754;
+  color: #fff;
+}
+.dashboard-livestream {
+  background: #0dcaf0;
+  color: #fff;
+}
+.dashboard-documents {
+  background: #ffc107;
+  color: #212529;
+}
+.dashboard-collections {
+  background: #6c757d;
+  color: #fff;
+}
+/* Custom widths for dashboard columns */
+.dashboard-col-wide {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+.dashboard-col-mid {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+.dashboard-col-narrow {
+  flex: 0 0 24%;
+  max-width: 24%;
+}
+/* Main content margin and padding after removing topbar */
+.dashboard-main-content {
+  margin-left: var(--sidebar-width);
+  padding-top: 0;
+}
+/* dashboard.css: Custom styles for dashboard box layout */
+.dashboard-grid {
+  height: 70vh;
+  min-height: 400px;
+}
+
+/* Custom widths for dashboard columns */
+.dashboard-col-wide {
+  flex: 0 0 38%;
+  max-width: 38%;
+}
+/* Dashboard layout utility classes */
+.dashboard-col-full {
+  height: 100%;
+  gap: 1rem;
+}
+.dashboard-row-20,
+.dashboard-row-80,
+.dashboard-row-100 {
+  width: 100%;
+}
+.dashboard-row-20 {
+  height: 20%;
+  margin-bottom: 1rem;
+}
+.dashboard-row-80 {
+  height: 80%;
+}
+.dashboard-row-100 {
+  height: 100%;
+}
+.dashboard-header, .dashboard-header h2 {
+  font-family: 'Fredoka One', cursive;
+}
