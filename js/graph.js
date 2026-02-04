@@ -55,17 +55,17 @@ function sampleAtTime(t){
 
 function cursorText(s){
   return [
-    `t: ${s.t.toFixed(3)} seconds`,
-    `height h: ${s.height.toFixed(4)} m`,
-    `displacement |Δy|: ${s.displacementMag.toFixed(4)} m`,
-    `v (+down): ${s.v.toFixed(4)} m/s`,
-    `|v|: ${s.speed.toFixed(4)} m/s`,
-    `a (+down): ${s.a.toFixed(4)} m/s²`,
-    `weight: ${s.weightN.toFixed(4)} N`,
-    `bounces so far: ${s.bounceCount}`,
-    `KE: ${s.KE.toFixed(4)} J`,
-    `PE: ${s.PE.toFixed(4)} J`,
-    `Total E: ${s.E.toFixed(4)} J`,
+    `t: ${s.t.toFixed(3)} seconds\n`,
+    `height h: ${s.height.toFixed(4)} m\n`,
+    `displacement |Δy|: ${s.displacementMag.toFixed(4)} m\n`,
+    `v (+down): ${s.v.toFixed(4)} m/s\n`,
+    `|v|: ${s.speed.toFixed(4)} m/s\n`,
+    `a (+down): ${s.a.toFixed(4)} m/s²\n`,
+    `weight: ${s.weightN.toFixed(4)} kg\n`,
+    `bounces so far: ${s.bounceCount}\n`,
+    `KE: ${s.KE.toFixed(4)} J\n`,
+    `PE: ${s.PE.toFixed(4)} J\n`,
+    `Total E: ${s.E.toFixed(4)} J\n`,
   ].join("\n");
 }
 
