@@ -78,17 +78,17 @@ function sampleAtTime(t){
 
 function formatTelemetry(s, params){
   return [
-    `t: ${s.t.toFixed(3)} s`,
-    `height h (above ground): ${s.height.toFixed(3)} m`,
-    `displacement |Δy|: ${s.displacementMag.toFixed(3)} m`,
-    `velocity v (+down): ${s.v.toFixed(3)} m/s`,
-    `speed |v|: ${s.speed.toFixed(3)} m/s`,
-    `acceleration a (+down): ${s.a.toFixed(3)} m/s²`,
-    `weight: ${s.weightN.toFixed(3)} N`,
-    `bounces so far: ${s.bounceCount}`,
-    `KE: ${s.KE.toFixed(3)} J`,
-    `PE: ${s.PE.toFixed(3)} J`,
-    `Total E: ${s.E.toFixed(3)} J`
+    `t: ${s.t.toFixed(3)} s\n`,
+    `height h (above ground): ${s.height.toFixed(3)} m\n`,
+    `displacement |Δy|: ${s.displacementMag.toFixed(3)} m\n`,
+    `velocity v (+down): ${s.v.toFixed(3)} m/s\n`,
+    `speed |v|: ${s.speed.toFixed(3)} m/s\n`,
+    `acceleration a (+down): ${s.a.toFixed(3)} m/s²\n`,
+    `weight: ${s.weightN.toFixed(3)} N\n`,
+    `bounces so far: ${s.bounceCount}\n`,
+    `KE: ${s.KE.toFixed(3)} J\n`,
+    `PE: ${s.PE.toFixed(3)} J\n`,
+    `Total E: ${s.E.toFixed(3)} J\n`
   ].join("\n");
 }
 
