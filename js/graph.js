@@ -55,7 +55,7 @@ function sampleAtTime(t){
 
 function cursorText(s){
   return [
-    `t: ${s.t.toFixed(3)} s`,
+    `t: ${s.t.toFixed(3)} seconds`,
     `height h: ${s.height.toFixed(4)} m`,
     `displacement |Δy|: ${s.displacementMag.toFixed(4)} m`,
     `v (+down): ${s.v.toFixed(4)} m/s`,

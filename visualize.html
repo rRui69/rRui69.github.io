@@ -1,24 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Visualization – Ball Fall</title>
 
-  <!-- UI EDIT: Change layout/spacing by editing Bootstrap classes in this file -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="./assets/style.css" rel="stylesheet">
 </head>
+
 <body class="bg-dark text-light">
   <div class="container py-4">
+
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
       <div>
         <h2 class="fw-bold mb-0">Visualization</h2>
-        <div class="text-secondary small">
-          Positive direction is downward · Displacement is always positive · Bounce enabled
+        <h3 class="fw-bold mb-0">Made by: John Elijah Cimafranca</h3>
+        <div class="text-secondary small" id="modeSubtitle">
+          Mode: (loading…)
         </div>
       </div>
-      <a class="btn btn-outline-light" href="./index.html">Back</a>
+
+      <div class="d-flex gap-2 align-items-center flex-wrap">
+        <!-- Mode toggle -->
+        <div class="btn-group" role="group" aria-label="Visualization mode">
+          <button id="btnMode2d" type="button" class="btn btn-outline-light">2D</button>
+          <button id="btnMode3d" type="button" class="btn btn-outline-light">3D</button>
+        </div>
+
+        <a class="btn btn-outline-light" href="./index.html">Back</a>
+      </div>
     </div>
 
     <div class="row g-3">
@@ -72,8 +83,8 @@
             <hr class="border-secondary my-3">
 
             <div class="mb-3">
-              <label class="form-label text-secondary small">Pixels per meter (visual scale)</label>
-              <input id="ppm" type="number" class="form-control" value="3" step="0.5" min="0.5">
+              <label id="ppmLabel" class="form-label text-secondary small">Scale</label>
+              <input id="ppm" type="number" class="form-control" value="3" step="0.5" min="0.1">
             </div>
 
             <div class="d-flex gap-2 flex-wrap">
@@ -82,27 +93,31 @@
               <button id="btnReset" class="btn btn-outline-light flex-grow-1" disabled>Reset</button>
             </div>
 
+            <!-- Optional: only your 3D script will use this, 2D will ignore it -->
+            <div class="form-check mt-3">
+              <input class="form-check-input" type="checkbox" id="lockCam" checked>
+              <label class="form-check-label text-secondary small" for="lockCam">
+                Lock camera during simulation (3D only)
+              </label>
+            </div>
+
             <hr class="border-secondary my-3">
 
             <label class="form-label text-secondary small">Scrub time</label>
             <input id="timeSlider" type="range" class="form-range" min="0" max="0" step="0.0166667" value="0" disabled>
 
-            <div class="text-secondary small">
-              Tip: Start → Pause → scrub time to show exact moments.
-            </div>
-
-            <!-- OPTIONAL OBJ NOTE:
-                 If you later upgrade this to a Three.js visualization, put your OBJ here:
-                 assets/models/ball.obj
-            -->
+            <div class="text-secondary small mt-2" id="modeHint"></div>
           </div>
         </div>
       </div>
 
-      <!-- Visualization + Stats -->
+      <!-- View + Stats -->
       <div class="col-12 col-lg-8">
-        <div class="canvas-wrap mb-3">
-          <canvas id="simCanvas"></canvas>
+        <div class="canvas-wrap mb-3" id="simHost">
+          <!-- JS will inject either:
+               2D: <canvas id="simCanvas"></canvas>
+               3D: <div id="simCanvas"></div>
+          -->
         </div>
 
         <div class="row g-3">
@@ -112,20 +127,22 @@
           <div class="col-12 col-md-6">
             <div class="stat mono" id="summaryBox"></div>
           </div>
-
           <div class="col-12">
             <div class="stat mono scrollbox" id="bounceBox"></div>
           </div>
         </div>
 
         <div class="text-secondary small mt-2">
-          Energy note: if e &lt; 1, total energy drops at each bounce (inelastic collision).
+          Energy note: if e &lt; 1, total energy drops at each bounce.
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Physics core always loaded -->
   <script src="./js/common.js"></script>
-  <script src="./js/visualize.js"></script>
+
+  <!-- Mode loader decides whether to load 2D or 3D scripts -->
+  <script src="./js/visualize_mode_loader.js"></script>
 </body>
 </html>

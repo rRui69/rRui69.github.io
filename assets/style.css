@@ -46,3 +46,35 @@
   overflow: auto;
   border-radius: 12px;
 }
+
+/* FIX: Make Bootstrap form elements readable on dark background */
+.form-control,
+.form-select,
+.form-range {
+  background-color: #0f1115 !important;
+  color: #e7eaf0 !important;
+  border-color: var(--border) !important;
+}
+
+.form-control::placeholder {
+  color: #aab2c0 !important;
+  opacity: 0.8;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #0f1115 !important;
+  color: #e7eaf0 !important;
+  border-color: #4ea1ff !important;
+  box-shadow: 0 0 0 .25rem rgba(78,161,255,.15) !important;
+}
+
+/* Optional: labels that might inherit odd colors */
+.form-label {
+  color: #e7eaf0;
+}
+
+#telemetryBox, #summaryBox, #bounceBox {
+  white-space: pre-wrap;
+}
+
