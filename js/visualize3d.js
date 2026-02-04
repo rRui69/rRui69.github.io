@@ -95,7 +95,7 @@ function formatTelemetry(s){
     `speed |v|: ${s.speed.toFixed(3)} m/s\n`,
     `acceleration a (+down): ${s.a.toFixed(3)} m/s²\n`,
     ``,
-    `weight: ${s.weightN.toFixed(3)} N\n`,
+    `weight: ${s.weightN.toFixed(3)} kg\n`,
     `bounces so far: ${s.bounceCount}\n`,
     ``,
     `KE: ${s.KE.toFixed(3)} J\n`,
@@ -417,4 +417,5 @@ loadOBJ();
 applyCameraLockRule(); // allow movement before start
 draw();
 renderLoop();
+
 
